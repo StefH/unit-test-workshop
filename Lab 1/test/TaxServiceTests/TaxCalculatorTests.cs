@@ -7,7 +7,7 @@ namespace TaxServiceTests
 {
     public class TaxCalculatorTests
     {
-        private ITaxCalculator _sut;
+        private readonly ITaxCalculator _sut;
 
         /// <summary>
         /// This constructor is executed by xunit each time a test is run.

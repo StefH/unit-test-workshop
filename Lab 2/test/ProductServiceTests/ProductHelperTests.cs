@@ -9,9 +9,9 @@ namespace ProductServiceTests
 {
     public class ProductHelperTests
     {
-        Mock<ITaxCalculator> _taxCalculatorMock;
+        readonly Mock<ITaxCalculator> _taxCalculatorMock;
 
-        IProductHelper _sut;
+        readonly IProductHelper _sut;
 
         public ProductHelperTests()
         {
