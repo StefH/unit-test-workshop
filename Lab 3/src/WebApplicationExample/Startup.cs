@@ -21,8 +21,8 @@ namespace WebApplicationExample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddTransient<IProductHelper, ProductHelper>();
-            services.AddSingleton<ITaxCalculator, TaxCalculator>();
+            services.AddSingleton<ITaxCalculator, TaxCalculator>(); // Singleton because always the same Tax
+            services.AddTransient<IProductHelper, ProductHelper>(); // Not a Singleton (just for example)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
