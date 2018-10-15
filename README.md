@@ -8,7 +8,7 @@ The basics of unit testing.
 Unit testing including mocking using [moq](https://github.com/moq/moq4) and easier assertion using [NFluent](https://github.com/tpierrain/NFluent).
 
 ## Lab 3
-Rewriting code (TODO)
+Example WebAPI using `IProductHelper.cs`
 
 # More examples
 For some real live examples, see:
