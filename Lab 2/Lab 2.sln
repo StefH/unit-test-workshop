@@ -7,10 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0211E306-05E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C16509AC-C30D-4798-9932-0AD5C7E059C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxServiceTests", "test\TaxServiceTests\TaxServiceTests.csproj", "{85DC74B4-9270-47EE-AF61-C50048414449}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxService", "src\TaxService\TaxService.csproj", "{6DA59AD9-C652-4360-BE1D-366DA94E49B9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "src\ProductService\ProductService.csproj", "{2E8A4540-86DF-4535-9181-00D80DBB5F72}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductServiceTests", "test\ProductServiceTests\ProductServiceTests.csproj", "{E9B0D88D-BC3C-4548-B70E-29027DBE61BC}"
@@ -20,20 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxService", "..\Lab 1\src\TaxService\TaxService.csproj", "{C8B611FE-8371-43D9-A612-992F92BD6B73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{85DC74B4-9270-47EE-AF61-C50048414449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85DC74B4-9270-47EE-AF61-C50048414449}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85DC74B4-9270-47EE-AF61-C50048414449}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85DC74B4-9270-47EE-AF61-C50048414449}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DA59AD9-C652-4360-BE1D-366DA94E49B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DA59AD9-C652-4360-BE1D-366DA94E49B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DA59AD9-C652-4360-BE1D-366DA94E49B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DA59AD9-C652-4360-BE1D-366DA94E49B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E8A4540-86DF-4535-9181-00D80DBB5F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E8A4540-86DF-4535-9181-00D80DBB5F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E8A4540-86DF-4535-9181-00D80DBB5F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,15 +32,18 @@ Global
 		{E9B0D88D-BC3C-4548-B70E-29027DBE61BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9B0D88D-BC3C-4548-B70E-29027DBE61BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9B0D88D-BC3C-4548-B70E-29027DBE61BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B611FE-8371-43D9-A612-992F92BD6B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B611FE-8371-43D9-A612-992F92BD6B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B611FE-8371-43D9-A612-992F92BD6B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B611FE-8371-43D9-A612-992F92BD6B73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{85DC74B4-9270-47EE-AF61-C50048414449} = {C16509AC-C30D-4798-9932-0AD5C7E059C8}
-		{6DA59AD9-C652-4360-BE1D-366DA94E49B9} = {0211E306-05E4-41E0-A1BC-C75C7AA10E5F}
 		{2E8A4540-86DF-4535-9181-00D80DBB5F72} = {0211E306-05E4-41E0-A1BC-C75C7AA10E5F}
 		{E9B0D88D-BC3C-4548-B70E-29027DBE61BC} = {C16509AC-C30D-4798-9932-0AD5C7E059C8}
+		{C8B611FE-8371-43D9-A612-992F92BD6B73} = {0211E306-05E4-41E0-A1BC-C75C7AA10E5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CA13295-2CD1-4C3C-B073-07B25F69AC5A}

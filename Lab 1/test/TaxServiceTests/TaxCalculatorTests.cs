@@ -19,7 +19,7 @@ namespace TaxServiceTests
         }
 
         [Fact]
-        public void TaxCalculator_Calculate_TaxType_Normal()
+        public void Calculate_WithTaxTypeNormal_ReturnsCorrectResult()
         {
             // Assign
             double value = 10;
@@ -33,7 +33,7 @@ namespace TaxServiceTests
         }
 
         [Fact]
-        public void TaxCalculator_Calculate_TaxType_Food()
+        public void Calculate_WithTaxTypeFood_ReturnsCorrectResult()
         {
             // Assign
             double value = 10;
@@ -50,7 +50,7 @@ namespace TaxServiceTests
         }
 
         [Fact]
-        public void TaxCalculator_Calculate_TaxType_Invalid_ThrowsException()
+        public void Calculate_WithInvalidTaxType_ThrowsException()
         {
             // Assign
             double value = 10;

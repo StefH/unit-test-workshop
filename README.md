@@ -5,7 +5,7 @@ C# Unit Test Workshop
 The basics of unit testing.
 
 ## Lab 2
-Unit testing including mocking using [moq](https://github.com/moq/moq4) and easier assertion using [NFluent](https://github.com/tpierrain/NFluent).
+Unit testing including mocking using [moq](https://github.com/moq/moq4) and easier assertion using [NFluent](http://www.n-fluent.net/) and [FluentAssertions](https://fluentassertions.com/).
 
 ## Lab 3
 Example WebAPI using `IProductHelper.cs` and `ITaxCalculator.cs`.

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaxService\TaxService.csproj" />
+    <ProjectReference Include="..\..\..\Lab 1\src\TaxService\TaxService.csproj" />
   </ItemGroup>
 
 </Project>

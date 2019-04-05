@@ -1,5 +1,5 @@
+using FluentAssertions;
 using Moq;
-using NFluent;
 using ProductService;
 using System;
 using TaxService;
@@ -26,7 +26,7 @@ namespace ProductServiceTests
         }
 
         [Fact]
-        public void ProductHelper_GetTotalValue_TaxType_Normal()
+        public void GetTotalValue_WithNumberOfProductsAndTaxTypeNormal_ReturnsCorrectResult()
         {
             // Assign
             int numProducts = 4;
@@ -37,7 +37,7 @@ namespace ProductServiceTests
             double result = _sut.GetTotalValue(numProducts, price, taxType);
 
             // Assert
-            Check.That(result).IsCloseTo(138, 1e-10);
+            result.Should().BeApproximately(138, 1e10);
 
             // Verify that the "Calculate" method is called only once with a double and a TaxType argument.
             _taxCalculatorMock.Verify(_ => _.Calculate(It.IsAny<double>(), It.IsAny<TaxType>()), Times.Once);
@@ -47,7 +47,7 @@ namespace ProductServiceTests
         }
 
         [Fact]
-        public void ProductHelper_GetTotalValue_TaxType_Food()
+        public void GetTotalValue_WithNumberOfProductsAndTaxTypeFood_ReturnsCorrectResult()
         {
             // Assign
             int numProducts = 4;
@@ -62,7 +62,7 @@ namespace ProductServiceTests
             double result = _sut.GetTotalValue(numProducts, price, taxType);
 
             // Assert
-            Check.That(result).IsCloseTo(193.2, 1e-10);
+            result.Should().BeApproximately(193.2, 1e10);
 
             // Verify that the "Calculate" method is called only once with a double and a TaxType argument.
             _taxCalculatorMock.Verify(_ => _.Calculate(It.IsAny<double>(), It.IsAny<TaxType>()), Times.Once);
@@ -72,7 +72,7 @@ namespace ProductServiceTests
         }
 
         [Fact]
-        public void ProductHelper_GetTotalValue_ITaxCalculator_Throws_Exception()
+        public void GetTotalValue_WithITaxCalculatorThrowsException_ThrowsException()
         {
             // Assign
             int numProducts = 4;
@@ -83,7 +83,9 @@ namespace ProductServiceTests
             _taxCalculatorMock.Setup(_ => _.Calculate(It.IsAny<double>(), It.IsAny<TaxType>())).Throws<NotSupportedException>();
 
             // Act and Assert
-            Check.ThatCode(() => _sut.GetTotalValue(numProducts, price, taxType)).Throws<NotSupportedException>();
+            Action action = () => _sut.GetTotalValue(numProducts, price, taxType);
+
+            action.Should().Throw<NotSupportedException>();
 
             // Verify that the "Calculate" method is called only once with a double and a TaxType argument.
             _taxCalculatorMock.Verify(_ => _.Calculate(It.IsAny<double>(), taxType), Times.Once);
